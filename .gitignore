@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pycGet-Content .\backend\app.py -TotalCount 35
+
+models/labels.json
+data/sequences/*
+data/videos/*
+!data/sequences/.gitkeep
+!data/videos/.gitkeep

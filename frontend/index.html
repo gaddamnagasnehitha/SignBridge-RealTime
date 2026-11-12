@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>SignBridge | AI Sign Language Translator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">✦ SignBridge</a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#translator">Translator</a>
+      <a href="#history">History</a>
+      <a href="#guide">How it works</a>
+    </nav>
+
+    <button id="themeBtn" class="theme-btn" type="button">
+      ☀️
+    </button>
+  </header>
+
+  <main>
+    <!-- Landing page -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="tag">✦ AI POWERED COMMUNICATION</span>
+
+        <h1>
+          Your Hands.<br>
+          <span>Your Voice.</span><br>
+          Your Connection.
+        </h1>
+
+        <p>
+          Break communication barriers with AI-powered sign
+          language recognition. Convert gestures into text
+          and speech in real time.
+        </p>
+
+        <a href="#translator" class="primary-link">
+          Start Translating →
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-icon">🤟</div>
+        <div class="visual-caption">
+          <strong>Communication for everyone</strong>
+          <span>Powered by Artificial Intelligence</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature cards -->
+    <section class="features">
+      <div class="feature-card">
+        <span>📷</span>
+        <h3>Live Camera</h3>
+        <p>Capture hand gestures in real time.</p>
+      </div>
+
+      <div class="feature-card">
+        <span>🧠</span>
+        <h3>AI Recognition</h3>
+        <p>Recognize signs using deep learning.</p>
+      </div>
+
+      <div class="feature-card">
+        <span>💬</span>
+        <h3>Text Translation</h3>
+        <p>Convert recognized signs into words.</p>
+      </div>
+
+      <div class="feature-card">
+        <span>🔊</span>
+        <h3>Voice Output</h3>
+        <p>Listen to your translated sentences.</p>
+      </div>
+    </section>
+
+    <!-- Translator dashboard -->
+    <section id="translator" class="workspace">
+      <div class="section-heading">
+        <span class="tag">LIVE WORKSPACE</span>
+        <h2>Sign Language Translator</h2>
+        <p>Show your signs to the camera and watch them transform into words.</p>
+      </div>
+
+      <div class="dashboard">
+        <div class="camera-panel">
+          <div class="panel-heading">
+            <h3>📷 Camera Preview</h3>
+            <span id="badge" class="badge">Camera off</span>
+          </div>
+
+          <div class="stage">
+            <video id="video" autoplay playsinline muted></video>
+            <div class="camera-placeholder" id="cameraPlaceholder">
+              <span>📷</span>
+              <p>Your camera preview will appear here</p>
+              <small>Allow camera access to begin</small>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="startBtn" class="primary-btn" type="button">
+              Start Camera
+            </button>
+            <button id="stopBtn" type="button" disabled>
+              Stop
+            </button>
+            <button id="clearBtn" type="button" disabled>
+              Clear
+            </button>
+          </div>
+
+          <label class="auto-speak">
+            <input type="checkbox" id="autoSpeak" checked>
+            Automatically speak new words
+          </label>
+        </div>
+
+        <div class="result-panel">
+          <div class="recognition-card">
+            <h3>✨ Current Recognition</h3>
+            <div id="current" class="current-sign">Waiting...</div>
+
+            <div class="progress-track">
+              <div id="barFill"></div>
+            </div>
+
+            <div class="recognition-info">
+              <span id="statusText">Idle</span>
+              <span id="confText"></span>
+            </div>
+          </div>
+
+          <div class="translation-card">
+            <h3>💬 Your Translation</h3>
+
+            <p id="sentence" class="sentence">
+              Your translated words will appear here...
+            </p>
+
+            <div class="voice-controls">
+              <button id="speakBtn" type="button">🔊 Speak</button>
+              <button id="pauseBtn" type="button">⏸ Pause</button>
+              <button id="resumeBtn" type="button">▶ Resume</button>
+              <button id="repeatBtn" type="button">🔁 Repeat</button>
+            </div>
+          </div>
+
+          <div class="history-card" id="history">
+            <h3>🕘 Recent Translations</h3>
+            <ul id="historyList">
+              <li>No translations yet. Start signing!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p id="error" class="error"></p>
+    </section>
+
+    <!-- Instructions -->
+    <section id="guide" class="guide">
+      <div class="section-heading">
+        <span class="tag">GETTING STARTED</span>
+        <h2>How to Use SignBridge</h2>
+        <p>Follow these simple steps to begin communicating.</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <span>01</span>
+          <h3>Enable Camera</h3>
+          <p>Click Start Camera and allow camera permission.</p>
+        </div>
+
+        <div class="guide-card">
+          <span>02</span>
+          <h3>Show Your Sign</h3>
+          <p>Keep your hands visible and perform a supported gesture.</p>
+        </div>
+
+        <div class="guide-card">
+          <span>03</span>
+          <h3>Get Translation</h3>
+          <p>View recognized words in the translation panel.</p>
+        </div>
+
+        <div class="guide-card">
+          <span>04</span>
+          <h3>Listen and Share</h3>
+          <p>Use voice output to hear your translated sentence.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h3>✦ SignBridge</h3>
+      <p>Breaking barriers. Connecting people. One sign at a time.</p>
+      <small>AI-Powered Sign Language Translator</small>
+    </footer>
+  </main>
+
+  <canvas id="canvas" hidden></canvas>
+  <script src="/static/app.js"></script>
+</body>
+</html>
