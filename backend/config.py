@@ -23,4 +23,4 @@ FEATURE_DIM = POSE_DIM + (FACE_DIM if USE_FACE else 0) + 2 * HAND_DIM
 CONF_THRESHOLD = 0.80   # minimum softmax confidence to accept a prediction
 VOTE_WINDOW = 5         # same label must win this many consecutive predictions
 IDLE_RESET_FRAMES = 10  # frames without hands before the window resets
-MODEL_COMPLEXITY = 1    # MediaPipe Holistic: 0 (fast), 1 (balanced), 2 (accurate)
+MODEL_COMPLEXITY = 0   # MediaPipe Holistic: 0 (fast), 1 (balanced), 2 (accurate)
